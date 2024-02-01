@@ -1,4 +1,7 @@
 FROM node:18 AS build
+
+ENV VITE_HOME_PLACE replace-with-home-address
+
 WORKDIR /app
 RUN npm i -g pnpm
 COPY package.json pnpm-lock.yaml ./
