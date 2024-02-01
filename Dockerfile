@@ -1,6 +1,7 @@
 FROM node:18 AS build
 
-ENV VITE_HOME_PLACE replace-with-home-address
+# Set the working directory
+ARG VITE_HOME_PLACE replace-me
 
 WORKDIR /app
 RUN npm i -g pnpm
